@@ -1,0 +1,61 @@
+/***************** PAGINA HOME *************************/
+html {
+    background: linear-gradient(135deg, #000000 , #227015 , #000000);
+}
+
+body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 300% 300%;
+      }
+ 
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 20rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 1600px) {
+    .home {
+        padding: 1rem 10rem;
+    }
+}
+
+
+.home img{
+    width: 25rem;
+    height: 22rem;
+}
+
+.home p{
+    font-weight: bold;
+    padding: 2rem 5rem;
+    background-color: #161616;
+    border: 0.5rem solid #25ce65;   
+    border-radius: 3rem;
+    color:#e1ebf1;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .home{
+        margin-top: 0rem;
+        padding: 1rem 1rem ;
+    }
+    .home p {
+        font-size: 1rem;
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home{
+        gap: 0rem;
+    }
+
+}

@@ -1,0 +1,208 @@
+<!--Codigo realizado por Alba Marco 100451139 y Emilio Hermosa del grupo de practicas 14-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aim</title>
+    <meta charset="UTF-8">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/cuenta.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Open+Sans?query=open+sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body onload="completar_cuenta()">
+    <input type="checkbox" id="menu" class="navbar__input">
+    <div class="contenedorGlobal">
+        <label for="menu" class="navbar__label">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-direction-horizontal" width="56" height="56" viewBox="0 0 24 24" stroke-width="2.5" stroke="#020202" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M10 9l-3 3l3 3" />
+                <path d="M14 9l3 3l-3 3" />
+            </svg>
+        </label>
+        <nav class="navbar">
+            <header class="navbar__header">
+                <a href="index.html"><img src="images/music_logo2.png" alt="logo"></a>
+                <h1>Aim</h1>
+            </header>
+            <ul class="navbar__nav">
+                <li class="nav__item">
+                    <a href="home.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="56"
+                            height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                        </svg>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headphones" width="60"
+                            height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <rect x="4" y="13" rx="2" width="5" height="7" />
+                            <rect x="15" y="13" rx="2" width="5" height="7" />
+                            <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+                        </svg>
+                        <p>Música</p>
+                    </a>   
+                </li>
+                <li class="nav__item">
+                    <a href="playlist.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-playlist" width="44" height="44" 
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="14" cy="17" r="3" />
+                            <path d="M17 17v-13h4" />
+                            <path d="M13 5h-10" />
+                            <line x1="3" y1="9" x2="13" y2="9" />
+                            <path d="M9 13h-6" />
+                          </svg>
+                        <p>Playlists</p>
+                    </a>   
+                </li>
+    
+                
+                <li class="nav__item">
+                    <a href="artista.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-award" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="12" cy="9" r="6" />
+                            <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                            <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
+                          </svg>
+                        <p>Artistas del momento</p>
+                    </a>   
+                </li>
+
+                <li class="nav__item">
+                    <a href="contactanos.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+                            <line x1="13" y1="8" x2="15" y2="8" />
+                            <line x1="13" y1="12" x2="15" y2="12" />
+                        </svg>
+                        <p>Contáctanos</p>
+                    </a>   
+                </li>
+
+                
+
+                <div class="nav__link">
+                    <li class="nav__item">
+                        <a href="https://www.instagram.com/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <rect x="4" y="4" width="16" height="16" rx="4" />
+                                <circle cx="12" cy="12" r="3" />
+                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                            </svg>
+                            <p>Instagram</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="https://twitter.com/search?q=music&src=typed_query"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                            </svg>
+                            <p>Twitter</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="https://policies.google.com/privacy?hl=es"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checkup-list" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                                <rect x="9" y="3" width="6" height="4" rx="2" />
+                                <path d="M9 14h.01" />
+                                <path d="M9 17h.01" />
+                                <path d="M12 16l1 1l3 -3" />
+                            </svg>
+                            <p>Politica de privacidad</p>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+        <div class="contenedor">
+            <header class="main__header">
+
+                <ul class="nav2">
+                    <img class="iniciada" id="imagen_perfil" src="">
+                    <li><a class="iniciada" id="nombre_header" href="">Nombre</a>
+                        <ul class="desplegable2">
+                            <li><a href="cuenta.html" onclick="completar_cuenta()">Cuenta</a></li>
+                            <li><a href="perfil.html" >Perfil</a></li>
+                            <li><a onclick="aparecer_mensaje()">Cerrar sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="ventana_cerrar_sesion ventana"> 
+                    <p>¿Estás seguro de que quieres cerrar la sesión?</p>
+                    <button class="boton" onclick="cerrar_sesion()">Si</button>
+                    <button class="boton" onclick="esconder_mensaje()">No</button>
+                </div>
+            </header>
+
+            <main class="main__body">
+                <h1>Cuenta</h1>
+                <div class="campos">
+                    <div class="campo">
+                        <p>Usuario: <span id="usuario_campo"></span></p>
+                        <button id="usuario_campo" onclick="boton_modificar(this.getAttribute('id'))">Modificar</button>           
+                        <input class="usuario_campo oculto" type="text" id="usuario__id" placeholder="Introduzca su nuevo nombre de usuario">
+                        <button class="usuario_campo oculto" onclick="modificar(this.getAttribute('class'))">Confirmar</button>
+                    </div>
+                    <div class="campo" id="pfp">
+                        <img id="pfp_campo" src="images/foto_perfil.webp"></img>
+                        <button id="pfp_campo" onclick="boton_modificar(this.getAttribute('id'))">Modificar</button>           
+                        <input class="pfp_campo oculto" type="text" id="pfp__id" placeholder="Introduzca su nueva foto de perfil">
+                        <button class="pfp_campo oculto" onclick="modificar(this.getAttribute('class'))">Confirmar</button>
+                    </div>
+                    <div class="campo">
+                        <p>Nombre completo: <span id="nombre_campo"></span></p>
+                        <button id="nombre_campo" onclick="boton_modificar(this.getAttribute('id'))">Modificar</button>           
+                        <input class="nombre_campo oculto" type="text" id="nombre__id" placeholder="Introduzca su nombre y apellidos">
+                        <button class="nombre_campo oculto" onclick="modificar(this.getAttribute('class'))">Confirmar</button>
+                    </div>
+                    <div class="campo">
+                        <p>Correo:   <span id="email_campo"></span></p>
+                        <button id="email_campo" onclick="boton_modificar(this.getAttribute('id'))">Modificar</button>           
+                        <input class="email_campo oculto" type="text" id="email__id" placeholder="Introduzca su nuevo correo">
+                        <button class="email_campo oculto" onclick="modificar(this.getAttribute('class'))">Confirmar</button>
+                    </div>
+                    <div class="campo">
+                        <p>Fecha de nacimiento: <span id="nacimiento_campo"></span></p>
+                        <button id="nacimiento_campo" onclick="boton_modificar(this.getAttribute('id'))">Modificar</button>           
+                        <input class="nacimiento_campo oculto" type="date" id="nacimiento__id" placeholder="Introduzca su fecha de nacimiento">
+                        <button class="nacimiento_campo oculto" onclick="modificar(this.getAttribute('class'))">Confirmar</button>
+                    </div>
+                    <div class="campo">
+                        <p>Contraseña: <span id="contrasena_campo"></span></p>
+                        <button id="contrasena_campo" onclick="boton_modificar(this.getAttribute('id'))">Modificar</button>           
+                        <input class="contrasena_campo oculto" type="text" id="contrasena__id" placeholder="Introduzca su nueva contraseña">
+                        <button class="contrasena_campo oculto" onclick="modificar(this.getAttribute('class'))">Confirmar</button>
+                    </div>
+                </div>
+                <p id = "errores"></p>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="js/log.js"></script>
+</body>
+
+</html>

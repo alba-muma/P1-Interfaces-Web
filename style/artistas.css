@@ -1,0 +1,106 @@
+.artista{
+    width: 90%;
+
+}
+
+.Descripcion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.songs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+
+    
+
+}
+
+
+.imagen{
+    margin-top: 3rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+
+
+}
+
+.txt{
+    align-self: center;
+    margin-left: 5rem;
+    margin-top: 1rem;
+    text-align: center;
+
+}
+
+.cancion{
+    margin: 2rem;
+    align-items: center;
+
+}
+
+.cancion h3{
+    position: relative;
+
+}
+
+.boton__artista{
+    background-color: var(--secundario);
+    color: var(--colorLetra1);
+    text-decoration: none;
+    border-radius: .5rem;
+    text-align: center;
+    width: 20rem;
+    z-index: 1000;
+    padding: 0.2rem;
+}
+
+
+
+@media (max-width: 768px){
+    .artista{
+        align-items: center;
+    }
+    .Descripcion{
+        display: grid;
+        align-items: center;
+    }
+
+    .txt{
+        margin: 0 auto;
+    }
+    .songs{
+        display: block;
+        margin: 0 auto;
+    }
+    .cancion{
+        margin: 0rem;
+        margin-top: 1rem ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .imagen{
+        width: 10rem;
+        height: 10rem;
+    }
+    .img{
+        margin: 0 auto;
+    }
+    .cancion h3{
+        position: relative;
+        top: 0rem;
+    }
+}
+
+
+

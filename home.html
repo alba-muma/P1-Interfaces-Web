@@ -1,0 +1,222 @@
+<!--Codigo realizado por Alba Marco 100451139 y Emilio Hermosa 100451150 del grupo de practicas 14-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Musica intro</title>
+    <meta charset="UTF-8">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/home.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body onload="actualizar_pagina()">
+    <input type="checkbox" id="menu" class="navbar__input">
+    <div class="contenedorGlobal">
+    <label for="menu" class="navbar__label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-direction-horizontal" width="56" height="56" viewBox="0 0 24 24" stroke-width="2.5" stroke="#161616" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M10 9l-3 3l3 3" />
+            <path d="M14 9l3 3l-3 3" />
+        </svg>
+    </label>
+    <nav class="navbar">
+        <header class="navbar__header">
+            <a href="index.html"><img src="images/music_logo2.png" alt="logo"></a>
+            <h1>Aim</h1>
+        </header>
+        <ul class="navbar__nav">
+            <li class="nav__item active">
+                <a href="home.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="56"
+                        height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#161616" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                    </svg>
+                    <p>inicio</p>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headphones" width="60"
+                        height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="4" y="13" rx="2" width="5" height="7" />
+                        <rect x="15" y="13" rx="2" width="5" height="7" />
+                        <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+                    </svg>
+                    <p>Música</p>
+                </a>   
+            </li>
+
+            <li class="nav__item iniciada">
+                <a href="perfil.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-playlist" width="44" height="44" 
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="14" cy="17" r="3" />
+                        <path d="M17 17v-13h4" />
+                        <path d="M13 5h-10" />
+                        <line x1="3" y1="9" x2="13" y2="9" />
+                        <path d="M9 13h-6" />
+                      </svg>
+                    <p>Playlists</p>
+                </a>   
+            </li>
+
+            
+            <li class="nav__item">
+                <a href="artista.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-award" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="9" r="6" />
+                        <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                        <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
+                      </svg>
+                    <p>Artistas del momento</p>
+                </a>   
+            </li>
+
+            <li class="nav__item">
+                <a href="contactanos.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+                        <line x1="13" y1="8" x2="15" y2="8" />
+                        <line x1="13" y1="12" x2="15" y2="12" />
+                      </svg>
+                    <p>Contáctanos</p>
+                </a>   
+            </li>
+
+            <div class="nav__link">
+                <li class="nav__item">
+                    <a href="https://www.instagram.com/">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                          </svg>
+                        <p>Instagram</p>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://twitter.com/search?q=music&src=typed_query"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                          </svg>
+                        <p>Twitter</p>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://policies.google.com/privacy?hl=es"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checkup-list" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                            <rect x="9" y="3" width="6" height="4" rx="2" />
+                            <path d="M9 14h.01" />
+                            <path d="M9 17h.01" />
+                            <path d="M12 16l1 1l3 -3" />
+                          </svg>
+                        <p>Politica de privacidad</p>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    <div class="contenedor">
+        <header class="main__header">
+            <!-- ordered list -->
+            <ul class='buscador iniciada'>
+                <li><input type="search" class="search" id="search2" placeholder="Busca tus canciones" onkeyup="search__song()">
+                    <ul class="list_songs">
+                        <button class="boton__cancion" id="AlAndalus" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Al Andalus</li></button>
+                        <button class="boton__cancion" id="Believer" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Believer</li></button>
+                        <button class="boton__cancion" id="ComeAndGetYourLove" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Come and Get Your Love</li></button>
+                        <button class="boton__cancion" id="ComoCamaron"onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Como camaron</li></button>
+                        <button class="boton__cancion" id="ElCuartetoDeIbai" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">El cuarteto De Ibai</li></button>
+                        <button class="boton__cancion" id="GameOver" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Game over</li></button>
+                        <button class="boton__cancion" id="HijoDeLaLuna" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Hijo de la luna</li></button>
+                        <button class="boton__cancion" id="LaLaLa" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">La la la</li></button>
+                        <button class="boton__cancion" id="LoseYourself" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Lose yourself</li></button>
+                        <button class="boton__cancion" id="Overwhelmed" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Overwhelmed</li></button>
+                        <button class="boton__cancion" id="RapContraElRacismo" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Rap contra el racismo</li></button>
+                        <button class="boton__cancion" id="Rema" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Rema</li></button>
+                        <button class="boton__cancion" id="SoldaditoMarinero" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Soldadito marinero</li></button>
+                        <button class="boton__cancion" id="Sugar" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Sugar</li></button>
+                        <button class="boton__cancion" id="TillICollapse" onclick="play__cancion(this.getAttribute('id'))"><li class="songs">Till I Collapse</li></button>
+                    </ul>
+                </li>
+            </ul>
+            <a class="no_iniciada" href="sesion.html">Inicio de sesión</a>
+            <a class="no_iniciada" href="log.html">Registro</a>
+            
+            <ul class="nav2">
+                <img class="iniciada" id="imagen_perfil" src="">
+                <li><a class="iniciada" id="nombre_header" href="">Nombre</a>
+                    <ul class="desplegable2">
+                        <li><a href="cuenta.html" onclick="completar_cuenta()">Cuenta</a></li>
+                        <li><a href="perfil.html" >Perfil</a></li>
+                        <li><a onclick="aparecer_mensaje()">Cerrar sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="ventana_cerrar_sesion ventana"> 
+                <p>¿Estás seguro de que quieres cerrar la sesión?</p>
+                <button class="boton" onclick="cerrar_sesion()">Si</button>
+                <button class="boton" onclick="esconder_mensaje()">No</button>
+            </div>
+        </header>
+        
+       
+
+        <main class="main__body">
+            <div class="home">
+                <h1>ALL IN MUSIC</h1>
+                <img src="images/music_logo.png" alt="Imagen de logo">
+                <p>
+                All in music (Aim) es la mejor web para disfrutar de la mejor música del momento y los clásicos de siempre. Regístrate ya y 
+                pasa a formar parte de nuestra gran familia. 
+                <br>Recordad que:<br>
+                - Sin música, la vida sería un error<br>
+                - La música es amor buscando palabras<br>
+                - La música puede cambiar el mundo porque puede cambiar a las personas<br>
+                - Donde las palabras fallan, la música habla
+                </p>
+            </div>
+            <div class="reproductor">
+                <img id="reproductor__imagen" src="">
+                <audio class="reproductor_audio" controls >
+                    <source src="" class="" id="audio" type="audio/mpeg">
+                </audio>
+                <img src = "images/NoLike.png" onclick="dar_like()" class="no_like iniciada">
+                <img src = "images/Corazon.png" onclick="quitar_like()" class="like_active iniciada">
+            </div>
+            <footer class="main__footer">
+                <p>"La música es una mayor revelación que toda la sabiduría y la filosofía"</p>
+            </footer>
+
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="js/log.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fito y los fitipaldis</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/artistas.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload= "actualizar_pagina(); show_artista()">
+    <input type="checkbox" id="menu" class="navbar__input">
+    <div class="contenedorGlobal">
+    <label for="menu" class="navbar__label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-direction-horizontal" width="56" height="56" viewBox="0 0 24 24" stroke-width="2.5" stroke="#020202" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M10 9l-3 3l3 3" />
+            <path d="M14 9l3 3l-3 3" />
+        </svg>
+    </label>
+    <nav class="navbar">
+        <header class="navbar__header">
+
+            <a href="index.html"><img src="images/music_logo2.png" alt="logo"></a>
+            <h1>Aim</h1>
+        </header>
+        <ul class="navbar__nav">
+            <li class="nav__item">
+                <a href="home.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="56"
+                        height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                    </svg>
+                    <p>Inicio</p>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headphones" width="60"
+                        height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="4" y="13" rx="2" width="5" height="7" />
+                        <rect x="15" y="13" rx="2" width="5" height="7" />
+                        <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+                    </svg>
+                    <p>Música</p>
+                </a>   
+            </li>
+
+            <li class="nav__item iniciada">
+                <a href="perfil.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-playlist" width="44" height="44" 
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="14" cy="17" r="3" />
+                        <path d="M17 17v-13h4" />
+                        <path d="M13 5h-10" />
+                        <line x1="3" y1="9" x2="13" y2="9" />
+                        <path d="M9 13h-6" />
+                      </svg>
+                    <p>Playlists</p>
+                </a>   
+            </li>
+
+            
+            <li class="nav__item active">
+                <a href="artista.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-award" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#161616" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="9" r="6" />
+                        <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                        <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
+                      </svg>
+                    <p>Artistas del momento</p>
+                </a>   
+            </li>
+
+            <li class="nav__item">
+                <a href="contactanos.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+                        <line x1="13" y1="8" x2="15" y2="8" />
+                        <line x1="13" y1="12" x2="15" y2="12" />
+                      </svg>
+                    <p>Contáctanos</p>
+                </a>   
+            </li>
+
+            
+
+            <div class="nav__link">
+                <li class="nav__item">
+                    <a href="https://www.instagram.com/">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                          </svg>
+                        <p>Instagram</p>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://twitter.com/search?q=music&src=typed_query"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                          </svg>
+                        <p>Twitter</p>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://policies.google.com/privacy?hl=es"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checkup-list" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#25ce65" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                            <rect x="9" y="3" width="6" height="4" rx="2" />
+                            <path d="M9 14h.01" />
+                            <path d="M9 17h.01" />
+                            <path d="M12 16l1 1l3 -3" />
+                          </svg>
+                        <p>Politica de privacidad</p>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <div class="main__header">
+            <ul class='buscador iniciada' >
+                <li><input type="search" class="search" id="search2" placeholder="Busca tus canciones" onkeyup="show_artista()">
+                    <ul class="list_songs">
+                        <button class="boton__artista" id="Laura Pausini" onclick="show_artista(this.getAttribute('id'))"><li class="artistas">Laura Pausini</li></button>
+                        <button class="boton__artista" id="Fito y los fitipaldis" onclick="show_artista(this.getAttribute('id'))"><li class="artistas">Fito y los fitipaldis</li></button>
+                        <button class="boton__artista" id="Imagine dragons" onclick="show_artista(this.getAttribute('id'))"><li class="artistas">Imagine Dragons</li></button>
+
+                    </ul>
+                </li>
+            </ul>
+            <a class="no_iniciada" href="sesion.html">Inicio de sesión</a>
+            <a class="no_iniciada" href="log.html">Registro</a>
+            
+            <ul class="nav2">
+                <img class="iniciada" id="imagen_perfil" src="">
+                <li><a class="iniciada" id="nombre_header" href="">Nombre</a>
+                    <ul class="desplegable2">
+                        <li><a href="cuenta.html" onclick="completar_cuenta()">Cuenta</a></li>
+                        <li><a href="perfil.html" >Perfil</a></li>
+                        <li><a onclick="aparecer_mensaje()">Cerrar sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="ventana_cerrar_sesion ventana"> 
+                <p>¿Estás seguro de que quieres cerrar la sesión?</p>
+                <button class="boton" onclick="cerrar_sesion()">Si</button>
+                <button class="boton" onclick="esconder_mensaje()">No</button>
+            </div>
+
+        </div>
+
+        <div class="main__body">
+            <div class="artista">
+                <div class="Descripcion">
+                    <div class="img">
+                        <img src="images/laura_logo.jfif" class="imagen">
+                    </div>
+
+                    <div class="txt">
+                        <h1>Laura Pausini </h1>
+                        <p>Ganadora de múltiples premios internacionales y nacionales en Italia, gracias a su poderosa 
+                            voz ha vendido más de 70 millones de discos. Obtuvo el primer y tercer lugar en el Festival de la 
+                            Canción de San Remo, dos Premios Lunezia, dieciocho Wind Music Awards, cuatro premios en el Festivalbar, 
+                            siete Telegatti y un Premio MTV de Música Italiana. A nivel internacional, ha ganado cuatro premios en el 
+                            Festival Internacional de la Canción de Viña del Mar, cuatro Premios Lo Nuestro, cuatro Premios Grammy Latinos 
+                            por sus álbumes Escucha en 2005,6​7​ Yo canto en 2007,8​ Primavera anticipada en 2009,9​10​ y Hazte sentir en 2018.11​un 
+                            Premios Billboard de la música latina, seis World Music Awards y ha recibido una nominación a los Premios Emmy. En 2006, 
+                            también se convirtió en la primera artista femenina italiana en ganar un Premios Grammy,12​ recibiendo el galardón al Mejor 
+                            Álbum Pop Latino por el disco Escucha. En 2021, fue nominada al Premios Óscar a la Mejor Canción Original con "Io sì (Seen)" 
+                            de la película La vita davanti a sé. El sencillo también ganó el Premios Globo de Oro a la Mejor Canción Original, convirtiéndose 
+                            en la primera canción en italiano en ganar el premio. Ha sido honrada como Comendadora del Orden al Mérito de la 
+                            República Italiana y como Embajadora Mundial de Emilia-Romaña.​</p>
+                    </div>
+                </div>
+
+
+                <div class="songs">
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/laura_logo.jfif">
+                        <img class="play" id="NadieHaDicho" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Nadie ha dicho</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/laura_logo.jfif">
+                        <img class="play" id="EntreTuYMilMares" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Entre tú<br> y mil mares</h3>
+                        
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/laura_logo.jfif">
+                        <img class="play" id="AmoresExtranos" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Amores extraños</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/laura_logo.jfif">
+                        <img class="play" id="Viveme" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Víveme</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/laura_logo.jfif">
+                        <img class="play" id="EnCambioNo" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>En cambio no</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="artista">
+                <div class="Descripcion">
+                    <div class="img">
+                        <img class="imagen" src="images/fito_logo.jfif">
+                    </div>
+
+                    <div class="txt">
+                        <h1>Fito y los Fitipaldis </h1>
+                        <p>Fito & Fitipaldis es un grupo musical español de rock and roll creado en 1997, 
+                            por Fito Cabrales, de Platero y Tú.1​ Inicialmente surgió como un proyecto paralelo que 
+                            Cabrales decidió continuar tras la disolución de su anterior banda. Las ventas de la banda 
+                            llevaron al grupo a recibir el Disco de Diamante por vender más de un millón de discos en octubre de 2007.2​ 
+                            Hasta octubre de 2014 las ventas superaron los 1,6 millones de discos vendidos.​</p>
+                    </div>
+                </div>
+
+
+                <div class="songs">
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/fito_logo.jfif">
+                        <img class="play" id="EntreLaEspadaYLaPared" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Entre la espada <br> y la pared</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/fito_logo.jfif">
+                        <img class="play" id="PorLaBocaViveElPez" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Por la boca <br> vive el pez</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/fito_logo.jfif">
+                        <img class="play" id="SoldaditoMarinero" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Soldadito marinero</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/fito_logo.jfif">
+                        <img class="play" id="MeEquivocariaOtraVez" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Me equivocaria otra vez</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/fito_logo.jfif">
+                        <img class="play" id="LaCasaPorElTejado" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>La casa por <br> el tejado</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="artista">
+                <div class="Descripcion">
+                    <div class="img">
+                        <img src="images/imagine_logo.jfif" class="imagen">
+                    </div>
+
+                    <div class="txt">
+                        <h1>Imagine Dragons </h1>
+                        <p>Imagine Dragons es una banda estadounidense de pop rock originaria de Las Vegas, 
+                            Nevada. Está compuesta por Dan Reynolds (vocalista), Daniel Wayne Sermon (guitarrista), 
+                            Ben McKee (bajista) y Daniel Platzman (baterista). Ganó el reconocimiento mundial con el lanzamiento 
+                            de su álbum de estudio debut Night Visions (2012), y con su canción "It's Time". Billboard los colocó 
+                            en la cima de su lista de popularidaddel 2013 "Year In Rock", y los llamó «la banda revelación del 2013».6​ 
+                            La revista Rolling Stone llamó a su canción Radioactive, del álbum Night Visions, «el mayor éxito rock del año».
+                            7​8​9​ MTV los llamó «la banda revelación del año».10​ "Radioactive" es la segunda canción con más semanas 
+                            dentro del Billboard Hot 100 en la historia, con un total de 87 semanas. Night Visions alcanzó su punto máximo 
+                            en el número dos de la lista semanal Billboard 200 y en UK Albums Chart. Su segundo álbum de estudio, Smoke + Mirrors, 
+                            alcanzó el número uno en los Estados Unidos, Canadá y el Reino Unido.​</p>
+                    </div>
+                </div>
+
+
+                <div class="songs">
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/imagine_logo.jfif">
+                        <img class="play" id="Believer" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Believer</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/imagine_logo.jfif">
+                        <img class="play" id="Thunder" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Thunder</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/imagine_logo.jfif">
+                        <img class="play" id="Enemy" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3 >Enemy</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/imagine_logo.jfif">
+                        <img class="play" id="Demons" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Demons</h3>
+                    </div>
+
+                    <div class="cancion">
+                        <img class="imagen_cancion" src="images/imagine_logo.jfif">
+                        <img class="play" id="Bones" onclick="play__cancion(this.getAttribute('id'))" src="images/play.png">
+                        <h3>Bones</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="reproductor">
+                <img id="reproductor__imagen" src="">
+                <audio class="reproductor_audio" controls >
+                    <source src="" class="" id="audio" type="audio/mpeg">
+                </audio>
+                <img src = "images/NoLike.png" onclick="dar_like()" class="no_like iniciada">
+                <img src = "images/Corazon.png" onclick="quitar_like()" class="like_active iniciada">
+            </div>
+        
+        </div>
+
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/artista.js"></script>
+    <script src="js/log.js"></script>
+
+</body>
+
+
+
+</html>

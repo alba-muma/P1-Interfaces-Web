@@ -1,0 +1,893 @@
+
+/* ---------------------------------------------------------- 
+ ------------------------- Globales ------------------------- 
+ ------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quantico', sans-serif;
+    color: var(--colorLetra1)
+}
+
+:root {
+
+    --fondoNavbar: #1c1c1c;
+    --colorLetra1: #f4faff; 
+    --principal: #161616;
+    --secundario: #25ce65;
+    
+    
+    /* Variables */
+    --navBarSizeShadow: 10px;
+
+    /* Variables pc */
+    --navBarSize: 4.5rem;
+    --mainSize: calc(100% - var(--varBarSizeTotal));
+    --navBarCheckPc: 20%;
+    --navBarCheckPcTotal: calc(var(--navBarCheckPc) + var(--navBarSizeShadow));
+    --mainSizeCheck: calc(100% - var(--navBarCheckPcTotal));
+    --varBarSizeTotal: calc(var(--navBarSize) + var(--navBarSizeShadow));
+
+    /* Variables tablet */
+    --navBarSizeTb: 4.5rem;
+    --mainSize: calc(100% - var(--varBarSizeTotalTb));
+    --navBarCheckTb: 35%;
+    --navBarCheckTbTotal: calc(var(--navBarCheckTb) + var(--navBarSizeShadow));
+    --mainSizeCheckTb: calc(100% - var(--navBarCheckTbTotal));
+    --varBarSizeTotalTb: calc(var(--navBarSizeTb) + var(--navBarSizeShadow));
+
+    --tamIcono: 2.5rem;
+
+}
+body {
+    background: #292929;
+}
+a,
+p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Quantico', sans-serif;
+}
+
+
+
+.cancion .imagen_cancion{
+    height: 12rem;
+    width: 12rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* ---------------------------------------------------------- 
+ ------------------------ Navegacion ------------------------ 
+ ------------------------------------------------------------ */
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: var(--navBarSize);
+
+    padding-top: 1.5rem;
+
+    background-color: var(--principal);
+    box-shadow: var(--navBarSizeShadow) 0 0 var(--secundario);
+    overflow-x: hidden;
+    z-index: 100;
+    transition: width 0.5s;
+}
+
+.navbar__nav {
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+/* ------------------------- Logo ----------------------------- */
+.navbar__header {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+
+}
+
+.navbar__header img{
+    width: 3.6rem;
+    height: 4.5rem;
+    margin: 0 0.5rem;
+    background-color: var(--colorLetra1);
+    border-radius: 50%;
+
+}
+
+.navbar__header h1{
+    margin-left: 3rem;
+    color: var(--colorLetra1);
+}
+
+/* ------------------Barra de navegacion -----------------------*/
+.nav__item {
+    width: 100%;
+    
+    list-style: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: var(--colorLetra1);
+
+    display: flex; 
+    align-items: center;
+
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: 3rem;
+}
+
+.icon {
+    margin: 0 0.5rem;
+    height: var(--tamIcono);
+    min-width: var(--tamIcono);
+    max-width: var(--tamIcono);
+}
+
+.nav__item p {
+    white-space: nowrap;
+    margin:auto;
+}
+
+.navbar__nav .active {
+    background-color: var(--secundario);
+}
+
+.navbar__nav .active p {
+    color: var(--fondoNavbar);
+}
+
+.nav__link {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5rem;
+    width: calc(100% - 1rem);
+}
+/* --------------------------------------------- */
+
+/* -------------Animacion link------------------ */
+.nav__item a::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    left: 1.5rem;
+    margin-top: 2.7rem;
+    background-color: var(--secundario);
+
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.nav__link .nav__item a::before {
+    left: 0.5rem;
+}
+
+.nav__item:hover a::before{
+    width: 100%;
+    transition: ease-in-out width 0.5s;
+}
+/* ---------------------------------------------- */
+
+/* -------------------Animacion de navbar -----------------*/
+.navbar__label {
+    position:fixed;
+    left: calc(var(--varBarSizeTotal) - 1.2rem);
+    top: 45%;
+    background-color: var(--secundario);
+    border-radius: 1rem;
+    z-index: 1;
+    align-items: center;
+}
+
+.navbar__label svg {
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.navbar__input{
+    visibility: hidden;
+}
+.navbar__input:checked + .contenedorGlobal .navbar__header{
+    padding-left: 4rem;
+    transition: all 0.5s;
+}
+.navbar__input:checked + .contenedorGlobal .navbar{
+    width: var(--navBarCheckPc);
+}
+
+.navbar__input:checked + .contenedorGlobal .contenedor{
+    width: var(--mainSizeCheck);
+    transition: width 0.5s;
+}
+
+.navbar__input:checked + .contenedorGlobal .navbar__label{
+    position: fixed;
+    left: calc(var(--navBarCheckPcTotal) - 1.5rem);
+    transition: left 0.5s;
+    z-index: 1000;
+}
+
+.navbar__input:checked + .contenedorGlobal .contenedor .main__header{
+    width: var(--mainSizeCheck);
+    transition: width 0.5s;
+}
+
+.navbar__input:checked + .contenedorGlobal .contenedor .main__footer{
+    width: var(--mainSizeCheck);
+    transition: width 0.5s;
+}
+
+@media screen and (max-height: 768px){
+    .navbar__nav a{
+        margin-bottom: .5rem ;
+        height: 2rem;
+    }
+
+    .nav__link{
+        margin-bottom: 0rem;
+    }
+    .nav__link a{
+        margin-bottom: .25rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar__input:checked + .contenedorGlobal .navbar{
+        width: var(--navBarCheckTb);
+    }
+
+    .navbar__input:checked + .contenedorGlobal .navbar__label{
+        position: fixed;
+        left: calc(var(--navBarCheckTb) - 1rem);
+    }
+
+    .navbar__input:checked + .contenedorGlobal .contenedor{
+        width: var(--mainSizeCheckTb);
+    }
+
+    .navbar__input:checked + .contenedorGlobal .contenedor .main__header{
+        width: var(--mainSizeCheckTb);
+    }
+
+    .navbar__input:checked + .contenedorGlobal .contenedor .main__footer{
+        width: var(--mainSizeCheckTb);
+        height: 5rem;
+    }
+
+    .navbar__input:checked + .contenedorGlobal .navbar__header h1{
+        margin-left: 2rem;
+
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .navbar__input:checked + .contenedorGlobal .navbar{
+        width: calc(100% - var(--navBarSizeShadow));
+    }
+    .navbar__input:checked + .contenedorGlobal .navbar__label{
+        left: calc(100% - 1.25rem);
+    }
+
+    .navbar__input:checked + .contenedorGlobal .navbar__header {
+        margin-left: 10rem;
+
+    }
+ }
+/* --------------------------------------------- */
+ 
+/* ---------------------------------------------------------- 
+ ------------------------------------------------------------
+ ------------------- Contenido Principal -------------------- 
+ ------------------------------------------------------------
+ ------------------------------------------------------------ */
+.contenedor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--mainSize);
+    transition: width 0.5s;
+}
+
+.main__body{
+    position:absolute;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    padding-bottom: 6rem;
+    align-items: center;
+}
+
+/* ----------------------------------------------------------
+ --------------------------- Header ------------------------- 
+ ------------------------------------------------------------ */
+
+.main__header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    text-align: right;
+    background-color: var(--principal);
+    box-shadow: 0 10px 0 var(--secundario);
+    width: var(--mainSize);
+    height: 3rem;
+    z-index: 10;
+    padding-top: 0.8rem;
+    overflow: hidden;
+
+}
+
+.main__header a{
+    padding: 2rem 3rem;
+    text-decoration: none;
+    color: var(--colorLetra1);
+    font-size: 1.1rem;
+}
+
+
+.main__header a:hover{
+    background-color: var(--secundario);
+}
+
+ul, ol{
+    list-style: none;
+}
+
+.nav2{
+    position: absolute;
+    top: 0;
+    right: 7rem;
+    width: 5rem;
+    
+}
+
+.nav2 li a{
+    background-color:#161616;
+    color: #fff;
+    text-decoration: none;
+    width: 10rem;
+    display: block;
+    padding: 0.9rem 1rem;
+    text-align: center;
+}
+
+.nav2 li #nombre_header{
+    padding-top: 1.2rem;
+    height: calc(3rem + 10px);
+}
+
+.nav2 img{
+    position: fixed;
+    top: 0.25rem;
+    right: 13rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 25%;
+}
+
+.nav2 a:hover{
+    background-color: var(--secundario);
+}
+
+.nav2 > li{
+    float: left;
+}
+
+.nav2 li ul{
+    display:none;
+    position: absolute;
+    }
+
+.nav2:hover > li ul{
+        display: block;
+        position: fixed;
+        padding-top: 10px;
+        top: calc(3rem);
+    }
+
+.nav2 li ul li{
+    position: relative;
+}
+
+.nav2 li ul li a{
+    text-align: center;
+    background-color:#161616;
+}
+
+
+.buscador{
+    top: 0;
+    margin: 0 auto;
+    width: 20rem;
+    
+}
+
+.buscador li input{
+    background: linear-gradient(50deg, #ffffff , #227015 , #ffffff);
+    width: 20rem;
+    padding: 0.5rem;
+    border-radius: 5%;
+    display: block;
+    text-align: left;
+    color: #161616;
+    margin-bottom: 1rem;
+}
+
+.buscador > li{
+    float: left;
+}
+
+.buscador li ul{
+    display: block;
+    position: fixed;
+}
+
+.buscador_usuario,
+.boton__cancion,
+.buscador_cancion{
+    background-color: var(--secundario);
+    color: var(--colorLetra1);
+    text-decoration: none;
+    border-radius: .5rem;
+    text-align: center;
+    width: 20rem;
+    z-index: 1000;
+    padding: 0.2rem;
+}
+
+
+.ventana{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--secundario);
+    border-radius: 5%;
+    box-shadow: 0 10px 0 var(--principal);
+   
+}
+
+.ventana_cerrar_sesion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 30rem;
+    height: 10rem;
+}
+
+.ventana p {
+    text-align: center;
+    margin:auto;
+    font-size: 1.2rem;
+}
+
+.ventana_cerrar_sesion p {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+}
+
+.ventana button {
+    background-color: var(--principal);
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+/* ----------------------------------------------------------
+ --------------------------- Main --------------------------- 
+ ------------------------------------------------------------ */
+
+.fila{
+    position: relative;
+    margin: auto;
+    text-align: center;
+
+}
+.fila h2{
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.canciones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+
+}
+
+.cancion{
+    text-align: center;
+    background-color: var(--principal);
+    border-radius: 1rem;
+    height: 18rem;
+    max-width: 12rem;
+    min-width: 12rem;
+
+}
+
+@media (max-width:1600px ) {
+    .canciones {
+        gap: 2rem;
+    }
+
+}
+
+.cancion h3 {
+    position: relative;
+    top: -3.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--colorLetra1);
+    padding: 0 1rem;
+}
+
+.reproductor #reproductor__imagen {
+    border-radius: 15%;
+    margin-right: 1rem;
+}
+
+.reproductor_audio {
+    position: relative;
+    top: 0;
+    height: 3rem;
+}
+
+.cancion:hover .imagen_cancion{
+    width: 12.5rem;
+    height: 12.5rem;
+    filter: brightness(50%);
+    transition: all 1s;
+}
+
+.cancion:hover {
+    max-width: 12.5rem;
+    min-width: 12.5rem;
+    box-shadow: 0 0 3rem #70e361 , 0 0 1rem #7bef90 ;
+    transition: all 0.5s;
+}
+
+ /* ----------------- Audio --------------------- */
+audio{
+    display: hidden;
+    position: relative;
+    width: 40rem;
+    height: 15rem;
+    top: -11.9rem;
+    right: 0.2rem;
+}
+
+/* Si no se usa no se ve bien el botón de audio en firefox */
+@-moz-document url-prefix() {
+    audio {
+        top: -12.3rem;
+        right: 0.2rem;
+    }
+}
+
+
+.cancion .play{
+    position: relative;
+    top: -8rem;
+    padding: 0.7rem;
+    padding-left: 0.8rem;
+    height: 3rem;
+    width: 3rem;
+    visibility: hidden;
+    
+    border-radius: 50%;
+    background-color: #25ce65;
+}
+
+.cancion:hover .play {
+    visibility: visible;
+    height: 3.1rem;
+    width: 3.1rem;
+    transition: all;
+    box-shadow: 0 0 3rem #45ff0c , 0 0 1rem #2bff00 ;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--secundario);
+}
+
+
+/* ---------------- Mq main -------------------- */
+@media (max-width: 768px) {
+    .buscador{
+        margin: 0 0;
+        top: 0rem;
+    }
+    .cancion {
+        max-width: 95%;
+        min-width: 95%;
+        height: 4rem;
+        margin: 0 5%;
+        padding: 0;
+    }
+
+    .cancion .play{
+        position: relative;
+        top: 0;
+        left: -3.5rem;
+        padding: 0.7rem;
+        padding-left: 0.8rem;
+        height: 3rem;
+        width: 3rem;
+        visibility: hidden;
+        
+        border-radius: 50%;
+        background-color: #25ce65;
+    }
+
+    .fila {
+        width: 100%;
+        margin: 0;
+    }
+
+    .fila h2 {
+        font-size: 2rem;
+    }
+
+    .canciones {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: auto;
+    }
+
+    .cancion {
+        display: flex;
+        align-items: center;
+    }
+
+    .cancion img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .cancion .imagen_cancion{
+        width: 4.1rem;
+        height: 4.1rem;
+        transition:  all 0.5s;
+    }
+
+    .cancion:hover .imagen_cancion {
+        width: 4.1rem;
+        height: 4.1rem;
+        transition:  all 0.5s;
+    }
+
+    .cancion:hover {
+        max-width: 90%;
+        min-width: 90%;
+        height: 4.1rem;
+        transition: all 0.5s;
+    }
+
+    .cancion h3 {
+        padding-right: 2.5rem;
+        position: relative;
+        top: 0;
+    }
+
+    
+    .ventana_cerrar_sesion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: 2rem;
+        width: 25rem;
+        height: 10rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .cancion h3 {
+        font-size: 1.2rem;
+    }
+    .main__header a{
+        font-size: 1.2rem;
+        padding: 5rem 1rem;
+    }
+    .buscador{
+        margin: 0 0;
+        top: 0rem;
+    }
+    .nav2 img{
+        display: none;
+    }
+
+
+}   
+
+/* ----------------------------------------------------------
+ --------------------------- Footer ------------------------- 
+ ------------------------------------------------------------ */
+ .reproductor {
+    height: 4rem;
+    position: fixed;
+    bottom: 2rem;
+    left: auto;
+    box-shadow: 0 5rem 0 var(--secundario);
+    background-color: #25ce65;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.main__footer{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    margin-top: 1rem;
+    height: 3rem;
+    width: var(--mainSize); 
+
+    background-color: var(--principal);
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-top-color: var(--secundario);  
+}
+
+.main__footer p{
+    text-align: center;
+    margin-top: 10px;
+    color : var(--colorLetra1);
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .main__footer {
+        height: 5rem;
+        padding: 0 5rem;
+    }
+}
+
+/******************************************** */
+/************** Play list ******************** */
+
+#canciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 10rem;
+}
+
+@media (max-width: 768px) {
+    #canciones {
+        display: flex;
+    }
+}
+
+.encabezado{
+    position: fixed;
+    top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--principal);
+    width: 100%;
+    z-index: 0;
+    box-shadow: 0 10px 0 var(--secundario);
+    z-index: 1;
+}
+
+.cancion h3 {
+    z-index: 0;
+}
+
+/********************************************** */
+/**************** Usuarios seguidos *********** */
+
+.usuarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10rem;
+    gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    .usuarios {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.usuario img{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 20%;
+}
+
+.usuario h3 {
+    text-align: center;
+    background-color: #25ce65;
+    border-radius: 15%;
+    padding: 0.5rem;
+}
+
+.no_canciones,
+.no_follow {
+    padding: 1rem;
+}
+
+
+/* Log y registro */
+.errores {
+    padding: 1rem;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.cancion2 .imagen_cancion{
+    height: 10rem;
+    width: 12rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.cancion2{
+    text-align: center;
+    background-color: var(--principal);
+    border-radius: 1rem;
+    height: 18rem;
+    max-width: 12rem;
+    min-width: 12rem;
+
+}
+
+.cancion2 h3 {
+    position: relative;
+    top: -1rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--colorLetra1);
+    padding: 0 1rem;
+}
+
+.countdowns{
+    background-color: var(--secundario);
+    position: relative;
+    top: -1rem;
+}
